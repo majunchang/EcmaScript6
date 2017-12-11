@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    // 解构赋值 对象的解构赋值用于从一个对象取值，相当于将所有可遍历的、但尚未被读取的属性，分配到指定的对象上面。所有的键和它们的值，都会拷贝到新对象上面。
+
+    let {x, y, ...z} = {x: 1, y: 2, a: 3, d: 4, e: 5}
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    // 扩展运算符（...）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中。  这等同于使用Object.assign方法。
+    let m = {
+        a: 3,
+        b: 4
+    }
+    let n = {...m}
+    console.log(n);
+
+//    let ab = { ...a, ...b };
+//    // 等同于
+//    let ab = Object.assign({}, a, b);
+</script>

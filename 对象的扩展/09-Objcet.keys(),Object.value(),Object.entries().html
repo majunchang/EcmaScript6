@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //  Object.keys()  ES5 引入了Object.keys方法，返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键名
+    var obj = {
+        a: '1',
+        b: '2',
+        c: '3'
+    }
+    //  Object.values()  Object.values方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值。(也就是value)
+
+    console.log(Object.keys(obj));  //   ["a", "b", "c"]
+    console.log(Object.values(obj)); //  ["1", "2", "3"]
+
+    // Object.entries方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组。
+    console.log(Object.entries(obj));
+   //  [['a', '1'], ['b', '2'], ['c', '3']]
+</script>

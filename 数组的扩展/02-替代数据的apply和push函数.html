@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    // 由于扩展运算符可以展开数组，所以不再需要apply方法，将数组转为函数的参数了。
+    //  应用Math.max方法，简化求出一个数组最大元素的写法。
+    // ES5 的写法
+    console.log(Math.max.apply(null, [14, 3, 77]));
+    // ES6 的写法
+    console.log(Math.max(...[14, 3, 77]));
+    // 等同于
+    console.log(Math.max(14, 3, 77));;
+
+
+
+    //  对于push方法 push方法的参数不能是数组，所以只好通过apply方法变通使用push方法。有了扩展运算符，就可以直接将数组传入push方法。
+    var arr1 = [0, 1, 2];
+    var arr2 = [3, 4, 5];
+    Array.prototype.push.apply(arr1, arr2);
+
+    // ES6 的写法
+    let arr1 = [0, 1, 2];
+    let arr2 = [3, 4, 5];
+    arr1.push(...arr2);
+
+</script>

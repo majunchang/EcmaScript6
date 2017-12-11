@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+/*
+ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全。
+padStart和padEnd一共接受两个参数，第一个参数用来指定字符串的最小长度，第二个参数是用来补全的字符串。
+ */
+console.log('x'.padStart(5, 'ab')); // 'ababx'
+console.log('x'.padStart(4, 'ab')); // 'abax'
+
+console.log('x'.padEnd(5, 'ab')); // 'xabab'
+console.log('x'.padEnd(4, 'ab')); // 'xaba'
+
+</script>

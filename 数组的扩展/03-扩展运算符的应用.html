@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    1 复制数组   数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。
+    数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。
+    a2并不是a1的克隆，而是指向同一份数据的另一个指针。修改a2，会直接导致a1的变化。ES5 只能用变通方法来复制数组
+     */
+
+//    const a1 = [1, 2];
+//    const a2 = a1;
+//
+//    a2[0] = 2;
+//    a1 // [2, 2]
+//
+//    const a1 = [1, 2];
+//    const a2 = a1.concat();  //  concat() 方法用于连接两个或多个数组。该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本
+//
+//    a2[0] = 2;
+//    a1 // [1, 2]
+
+    // 扩展运算符提供了复制数组的简便写法
+
+    var arr1 = [1,2];
+    var arr2 = [...arr1];
+    arr2[0] = 'a';
+    console.log(arr1);
+    console.log(arr2);
+
+    var k1 = [1,2];
+    var k2 = k1.slice();
+    k2[0] = 'b'
+    console.log(k1);
+    console.log(k2);
+
+//  2 合并数组   扩展运算符提供了数组合并的新写法
+
+    var arr1 = ['a', 'b'];
+    var arr2 = ['c'];
+    var arr3 = ['d', 'e'];
+    console.log([...arr1, ...arr2, ...arr3]);
+
+</script>

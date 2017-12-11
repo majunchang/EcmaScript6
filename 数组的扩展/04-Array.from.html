@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
+
+    // 下面是一个类似数组的对象，Array.from将它转为真正的数组。
+    let arrayLike = {
+        '0': 'a',
+        '1': 'b',
+        '2': 'c',
+        length: 3
+    };
+
+    // ES5的写法
+    var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+    console.log(arr1);
+
+    // ES6的写法
+    let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+    console.log(arr2);
+
+    //  Array.from还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组
+    Array.from(arrayLike, x => x * x);
+    // 等同于
+    Array.from(arrayLike).map(x => x * x);
+
+    Array.from([1, 2, 3], (x) => x * x)  //  [1,4,9]
+</script>

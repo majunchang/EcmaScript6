@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    var obj = {
+        foo:1,
+        bar:2,
+        get baz(){
+            return this.foo+this.bar;
+        },
+        ma () {
+            return this.foo+this.bar
+            console.log('majunchang');
+        }
+    }
+
+
+    console.log(obj.baz);
+    console.log(Reflect.get(obj, 'foo'));
+    console.log(Reflect.get(obj, 'baz'));
+    console.log(Reflect.get(obj, 'ma'));
+
+    var obj1 = {
+        foo:9,
+        bar:10
+    }
+
+    console.log(Reflect.get(obj, 'baz', obj1));
+</script>

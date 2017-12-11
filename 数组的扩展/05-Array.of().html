@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    //  Array.of方法用于将一组值，转换为数组。 Array.of基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。
+    Array.of(3, 11, 8) // [3,11,8]
+    Array.of(3) // [3]
+    Array.of(3).length // 1
+
+
+    // Array.of方法可以用下面的代码模拟实现。
+
+    function ArrayOf() {
+        return [].slice.call(arguments)
+    }
+
+    /*
+    call
+//        语法：  函数名.call(要让this指向谁, arg1, arg2, arg3...argN)
+//        功能：
+//        1. 调用该函数
+//        2. 改变函数内的this指向
+//        3. 将第二个参数之后的所有参数，当做实参依次传递给该函数
+
+     */
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。
+//    let { foo, bar } = { foo: "aaa", bar: "bbb" };
+//    foo // "aaa"
+//    bar // "bbb"
+
+
+    // 对象的解构赋值的内部机制  对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者。
+    var { foo: foo, bar: bar } = { foo: "aaa", bar: "bbb" };
+    console.log(foo);
+    console.log(bar);
+
+    // 嵌套赋值
+//    const node = {
+//        loc: {
+//            start: {
+//                line: 1,
+//                column: 5
+//            }
+//        }
+//    };
+//
+//    let { loc, loc: { start }, loc: { start: { line }} } = node;
+//    line // 1
+//    loc  // Object {start: Object}
+//    start // Object {line: 1, column: 5}
+</script>

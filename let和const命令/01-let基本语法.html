@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    /*
+        1  let 声明的变量 只在let命令所在的代码块内有效（for循环）
+        2  let 不存在变量提升 一定要在声明后使用
+        3  存在暂时性死区现象
+        4  不允许在相同作用域内重复声明同一个变量
+        5  块级作用域
+
+     */
+
+    //    {
+    //        let b =10;
+    //        var a = 10;
+    //    }
+    //    console.log(a);
+    //    console.log(b);  // 10   ReferenceError: b is not defined
+
+    //
+//    var a = [];
+//    for (var i = 0; i < 10; i++) {
+//        a[i] = function () {
+//            console.log(i);
+//        };
+//    }
+//    a[6]();  // 10
+
+
+    var a = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = function () {
+            console.log(i);
+        };
+    }
+    a[6](); // 6
+
+
+    var tmp = 123;
+
+    if (true) {
+        tmp = 'abc'; // ReferenceError
+        let tmp;
+    }
+</script>

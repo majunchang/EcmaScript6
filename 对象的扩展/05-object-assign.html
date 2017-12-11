@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
+    Object.assign方法的第一个参数是目标对象，后面的参数都是源对象
+    注意，如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性。
+     */
+    const a1 = {a: 1}
+    const b1 = {b: 2}
+    const c1 = {c: 3}
+    Object.assign(a1,b1,c1)
+    console.log(a1);  //  // {a:1, b:2, c:3}
+
+    //  注意点 Object.assign()  实行的是浅拷贝 得到是这个对象的引用 而内存地址 指向的还是一样的
+
+    var arr1 = {a:1,b:2}
+    var arr2 = Object.assign(arr1)
+    arr2['b'] = 'majunchang'
+    console.log(arr1);
+    console.log(arr2);
+
+    // 数组的处理  这个方法 会把数组视为对象  以索引值作为key
+    console.log(Object.assign([1, 2, 3], [4, 5]));
+
+
+</script>

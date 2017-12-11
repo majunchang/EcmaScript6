@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    // 基本用法  ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
+
+    // Set 本身是一个构造函数，用来生成 Set 数据结构
+    const s =new Set();
+    [2, 3, 5, 4, 5, 2, 2].forEach(x=>{
+        s.add(x)
+    })
+    console.log(s);
+    console.log(s.size);
+    console.log(s.length);
+
+    console.log(new Set([2, 3, 5, 4, 5, 2, 2]));
+    console.log([...new Set([2, 3, 5, 4, 5, 2, 2])]);
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //  ES6 允许字面量定义对象时，用方法二（表达式）作为对象的属性名，即把表达式放在方括号内。
+    var ab = 'a b';
+    const obj = {
+        'a':'hello',
+        [ab]:'world'
+    }
+
+    console.log(obj['a']);
+    console.log(obj[ab]);
+    console.log(obj['a b']);
+
+    // 表达式还可以用于定义方法名
+    let obj1 = {
+        ['h'+'ello'](){
+            return 'hi'
+        }
+    }
+    console.log(obj1.hello());
+
+</script>

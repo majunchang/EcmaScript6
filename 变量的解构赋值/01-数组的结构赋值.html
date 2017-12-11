@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //  解构赋值的定义： 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构
+    let [x, y = 'b'] = ['a']; // x='a', y='b'
+    let [x, y = 'b'] = ['a', undefined]; // x='a', y='b'
+
+
+    let [foo, [[bar], baz]] = [1, [[2], 3]];
+    foo // 1
+    bar // 2
+    baz // 3
+
+</script>
