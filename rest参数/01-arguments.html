@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function fn () {
+        var args = [].slice.call(arguments)
+        console.log(args)
+    }
+
+    fn(1, 2, 3, 4)
+
+    const restFn = (...args) => {
+        console.log(...args)
+        console.log(args)
+    }
+
+    restFn(1, 2, 3, 4)
+
+
+</script>
